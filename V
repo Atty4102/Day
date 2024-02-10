@@ -1,0 +1,23 @@
+import tkinter as tk
+from tkinter import messagebox
+
+def valentines_response(response):
+    if response == "yes":
+        messagebox.showinfo("Response", "That's fantastic! Happy Valentine's Day!")
+    elif response == "no":
+        messagebox.showinfo("Response", "Oh, no worries. Have a great day!")
+
+# Create the main window
+root = tk.Tk()
+root.title("Valentine's Day")
+
+# Create buttons
+yes_button = tk.Button(root, text="Yes", command=lambda: valentines_response("yes"))
+no_button = tk.Button(root, text="No", command=lambda: valentines_response("no"))
+
+# Pack buttons into the window
+yes_button.pack(pady=10)
+no_button.pack(pady=10)
+
+# Start the Tkinter event loop
+root.mainloop()
